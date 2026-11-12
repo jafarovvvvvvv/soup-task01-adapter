@@ -1,0 +1,22 @@
+base: Qwen/Qwen2.5-1.5B-Instruct
+task: sft
+
+data:
+  train: ./data/train.jsonl
+  format: alpaca
+  val_split: 0.05
+  max_length: 512
+
+training:
+  epochs: 2
+  lr: 2e-4
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  gradient_checkpointing: true
+  lora:
+    r: 16
+    alpha: 32
+    target_modules: [q_proj, k_proj, v_proj, o_proj, gate_proj, up_proj, down_proj]
+  quantization: none
+
+output: ./output
