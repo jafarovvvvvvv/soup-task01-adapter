@@ -9,7 +9,7 @@ It is published only so the experiment can be reproduced and checked.
 - `adapter_config.json`: PEFT configuration (peft 0.21.2)
 - `soup.yaml`: the exact Soup 0.77.2 training config
 - `soup_run.json`: run id, base revision and SHA-256 of the training data as recorded by Soup
-- `train_1598_rows.jsonl`: the exact training rows (random subsample of d0rj/alpaca-cleaned-ru, seed 42; Soup used 80 more rows of this file as validation)
+- `train_1598_rows.jsonl`: the exact training rows (SHA-256 `72e3f36cc2bd59b6a58e8333a05261c66c8b56f5a51a4425535e26f1147bc901`, the value recorded in soup_run.json; Windows line endings are kept on purpose) (random subsample of d0rj/alpaca-cleaned-ru, seed 42; Soup used 80 more rows of this file as validation)
 
 ## Exact base model
 `Qwen/Qwen2.5-1.5B-Instruct`, revision `989aa7980e4cf806f80c7fef2b1adb7bc71aa306`
